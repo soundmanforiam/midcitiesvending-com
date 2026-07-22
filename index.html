@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cashless Vending Machines in Dallas–Fort Worth | Mid Cities Vending</title>
+<meta name="description" content="Modern cashless vending machines for DFW offices, warehouses, dealerships, and breakrooms. Tap-to-pay, smart inventory tracking, stocking, service, and maintenance included.">
+<meta property="og:title" content="Cashless Vending Machines in Dallas–Fort Worth | Mid Cities Vending">
+<meta property="og:description" content="Modern cashless vending machines for DFW offices, warehouses, dealerships, and breakrooms.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#12181C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="status-pill"><span class="status-dot"></span><span data-key="business.statusLabel"></span></span>
+      <div class="topbar-contact">
+        <a data-key="business.phoneDisplay" data-attr-href="business.phoneHref"></a>
+        <a data-key="business.email" data-attr-href="business.emailHref"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img id="brand-logo" src="" alt="" width="30" height="30">
+      </span>
+      <span class="brand-text">
+        <span class="brand-name" data-key="business.shortName"></span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" data-open="false">
+      <ul id="nav-list"></ul>
+      <a class="btn btn-vend nav-cta" href="#get-started">Request Assessment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow" data-key="hero.eyebrow"></p>
+        <h1 class="hero-headline" data-key="hero.headline"></h1>
+        <p class="hero-body" data-key="hero.body"></p>
+        <div class="hero-ctas">
+          <a class="btn btn-vend" data-key="hero.primaryCta.label" data-attr-href="hero.primaryCta.href"></a>
+          <a class="btn btn-ghost" data-key="hero.secondaryCta.label" data-attr-href="hero.secondaryCta.href"></a>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="hero-visual" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section" id="how-it-works">
+    <div class="wrap">
+      <p class="eyebrow" data-key="howItWorks.eyebrow"></p>
+      <h2 class="section-headline" data-key="howItWorks.headline"></h2>
+      <p class="section-body" data-key="howItWorks.body"></p>
+      <ol class="steps" id="steps-list"></ol>
+    </div>
+  </section>
+
+  <!-- ============ UPGRADE / MODERN MACHINES ============ -->
+  <section class="section section-alt" id="about">
+    <div class="wrap upgrade-grid">
+      <div class="upgrade-copy">
+        <p class="eyebrow" data-key="upgrade.eyebrow"></p>
+        <h2 class="section-headline" data-key="upgrade.headline"></h2>
+        <p class="section-body" data-key="upgrade.body"></p>
+      </div>
+      <div class="upgrade-visual" id="upgrade-visual" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE AREAS / LOCATIONS ============ -->
+  <section class="section" id="service-areas">
+    <div class="wrap">
+      <p class="eyebrow" data-key="locations.eyebrow"></p>
+      <h2 class="section-headline" data-key="locations.headline"></h2>
+      <p class="section-body" data-key="locations.body"></p>
+      <ul class="chip-list" id="location-types"></ul>
+
+      <div class="area-cities">
+        <p class="area-cities-label">We currently serve</p>
+        <ul class="city-list" id="city-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section section-alt" id="features">
+    <div class="wrap">
+      <h2 class="section-headline">Everything's handled.</h2>
+      <div class="feature-grid" id="feature-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials">
+    <div class="wrap testimonials-inner">
+      <p class="eyebrow" data-key="testimonials.eyebrow"></p>
+      <h2 class="section-headline" data-key="testimonials.headline"></h2>
+      <div class="google-row">
+        <img id="google-logo" src="" alt="" width="28" height="28">
+        <p class="section-body on-dark" data-key="testimonials.body"></p>
+      </div>
+      <a class="btn btn-outline" id="review-link" data-key="testimonials.reviewCtaLabel" data-attr-href="testimonials.reviewUrl"></a>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <p class="eyebrow" data-key="faq.eyebrow"></p>
+      <h2 class="section-headline" data-key="faq.headline"></h2>
+      <div class="faq-list" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band" id="get-started">
+    <div class="wrap cta-band-inner">
+      <p class="eyebrow eyebrow-on-dark" data-key="ctaBand.eyebrow"></p>
+      <h2 class="section-headline on-dark" data-key="ctaBand.headline"></h2>
+      <p class="section-body on-dark" data-key="ctaBand.body"></p>
+      <a class="btn btn-vend" data-key="ctaBand.cta.label" data-attr-href="ctaBand.cta.href"></a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow" data-key="contact.eyebrow"></p>
+      <h2 class="section-headline" data-key="contact.headline"></h2>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="contact-code"><img src="./img/phone.png" width="30px" height="auto"></span>
+          <h3 data-key="contact.callTitle"></h3>
+          <p data-key="contact.callBody"></p>
+          <a class="contact-link" data-key="business.phoneDisplay" data-attr-href="business.phoneHref"></a>
+        </div>
+        <div class="contact-card">
+          <span class="contact-code"><img src="./img/email.png" width="30px" height="auto"></span>
+          <h3 data-key="contact.emailTitle"></h3>
+          <p data-key="contact.emailBody"></p>
+          <a class="contact-link" data-key="business.email" data-attr-href="business.emailHref"></a>
+        </div>
+      </div>
+
+      <div class="social-row" id="social-row"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span data-key="footer.name"></span>
+    <ul class="footer-links" id="footer-links"></ul>
+  </div>
+</footer>
+
+<noscript>
+  <div style="padding:2rem;font-family:sans-serif;max-width:640px;margin:0 auto;">
+    <h1>Mid Cities Vending</h1>
+    <p>Modern cashless vending machines for DFW offices, warehouses, dealerships, and breakrooms. Call (682) 207-7950 or email contact@midcitiesvending.com to request a free assessment.</p>
+  </div>
+</noscript>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
