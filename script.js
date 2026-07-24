@@ -4,7 +4,7 @@
  * ============================================================
  * You shouldn't need to edit this file. It reads CONTENT from
  * content.js and fills in the page. To change words, links,
- * phone number, FAQ, etc., edit content.js instead.
+ * phone number, FAQ, images, etc., edit content.js instead.
  * ============================================================
  */
 (function () {
@@ -16,12 +16,10 @@
     return;
   }
 
-  /** Read a dotted path like "hero.primaryCta.label" out of an object. */
   function getPath(obj, path) {
     return path.split(".").reduce((acc, key) => (acc == null ? undefined : acc[key]), obj);
   }
 
-  /** Resolve special computed hrefs that aren't stored directly in content.js. */
   function resolveHref(path) {
     if (path === "business.phoneHref") return c.business.phoneHref;
     if (path === "business.emailHref") return "mailto:" + c.business.email;
@@ -40,7 +38,8 @@
   // ---------- generic [data-key] / [data-attr-href] binding ----------
   document.querySelectorAll("[data-key]").forEach((el) => {
     const val = getPath(c, el.getAttribute("data-key"));
-    if (val != null) el.textContent = val;
+    if (val != null && val !== "") el.textContent = val;
+    else if (val === "") el.remove();
   });
 
   document.querySelectorAll("[data-attr-href]").forEach((el) => {
@@ -88,54 +87,27 @@
     if (window.innerWidth >= 860) closeNav();
   });
 
-  // ---------- hero visual ----------
-  const heroVisual = document.getElementById("hero-visual");
-  if (heroVisual && c.hero.image) {
-    const img = document.createElement("img");
-    img.src = c.hero.image;
-    img.alt = c.hero.imageAlt || "";
-    heroVisual.appendChild(img);
+  // ---------- hero image ----------
+  const heroImage = document.getElementById("hero-image");
+  if (c.hero.image) {
+    heroImage.src = c.hero.image;
+    heroImage.alt = c.hero.imageAlt || "";
+  } else {
+    heroImage.closest(".hero-media").remove();
   }
 
-  // ---------- how it works steps ----------
-  const stepsList = document.getElementById("steps-list");
-  c.howItWorks.steps.forEach((step) => {
-    const li = document.createElement("li");
-    li.className = "step";
-    li.innerHTML = `
-      <span class="step-code">${step.code}</span>
-      <div>
-        <h3>${step.title}</h3>
-        <p>${step.description}</p>
-      </div>
-    `;
-    stepsList.appendChild(li);
-  });
+  // ---------- how it works image ----------
+  const howImage = document.getElementById("how-it-works-image");
+  if (c.howItWorks.image) {
+    howImage.src = c.howItWorks.image;
+    howImage.alt = c.howItWorks.imageAlt || "";
+  }
 
-  // ---------- upgrade visual (photo if provided, else built-in graphic) ----------
-  const upgradeVisual = document.getElementById("upgrade-visual");
+  // ---------- upgrade / modern machines image ----------
+  const upgradeImage = document.getElementById("upgrade-image");
   if (c.upgrade.photo) {
-    const img = document.createElement("img");
-    img.src = c.upgrade.photo;
-    img.alt = c.upgrade.photoAlt || "";
-    img.style.width = "100%";
-    img.style.height = "100%";
-    img.style.objectFit = "cover";
-    upgradeVisual.appendChild(img);
-  } else {
-    upgradeVisual.innerHTML = `
-      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="6" width="100" height="108" rx="8" stroke="#FF4B2B" stroke-width="2.5"/>
-        <rect x="20" y="16" width="80" height="46" rx="3" stroke="#3DDC84" stroke-width="1.5" opacity="0.7"/>
-        <line x1="20" y1="74" x2="100" y2="74" stroke="#39454B" stroke-width="1.5"/>
-        <circle cx="30" cy="86" r="4" stroke="#8A9499" stroke-width="1.5"/>
-        <circle cx="45" cy="86" r="4" stroke="#8A9499" stroke-width="1.5"/>
-        <circle cx="60" cy="86" r="4" stroke="#8A9499" stroke-width="1.5"/>
-        <circle cx="75" cy="86" r="4" stroke="#8A9499" stroke-width="1.5"/>
-        <circle cx="90" cy="86" r="4" stroke="#8A9499" stroke-width="1.5"/>
-        <rect x="30" y="98" width="60" height="10" rx="2" stroke="#8A9499" stroke-width="1.5"/>
-      </svg>
-    `;
+    upgradeImage.src = c.upgrade.photo;
+    upgradeImage.alt = c.upgrade.photoAlt || "";
   }
 
   // ---------- location type chips ----------
@@ -160,15 +132,20 @@
     cityList.appendChild(li);
   });
 
+  // ---------- google logo (testimonials) ----------
+  const googleLogo = document.getElementById("google-logo");
+  if (googleLogo && c.testimonials.googleLogo) {
+    googleLogo.src = c.testimonials.googleLogo;
+  }
+
   // ---------- feature cards ----------
   const featureGrid = document.getElementById("feature-grid");
   c.features.forEach((f) => {
     const card = document.createElement("div");
     card.className = "feature-card";
-    const imgHtml = f.image ? `<img class="feature-image" src="${f.image}" alt="" width="56" height="56">` : "";
+    const imgHtml = f.image ? `<img src="${f.image}" alt="" width="56" height="56">` : "";
     card.innerHTML = `
       ${imgHtml}
-      <span class="feature-code">${f.code}</span>
       <h3>${f.title}</h3>
       <p>${f.description}</p>
     `;
@@ -211,13 +188,6 @@
       }
     });
   });
-
-  // ---------- google logo (testimonials) ----------
-  const googleLogo = document.getElementById("google-logo");
-  if (googleLogo && c.testimonials.googleLogo) {
-    googleLogo.src = c.testimonials.googleLogo;
-    googleLogo.alt = "Google";
-  }
 
   // ---------- social links ----------
   const socialRow = document.getElementById("social-row");

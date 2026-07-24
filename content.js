@@ -4,7 +4,7 @@
  * ============================================================
  * This is the ONLY file you should need to edit.
  * Everything on the website — headlines, body copy, phone
- * number, email, links, FAQ, service areas — lives here.
+ * number, email, links, FAQ, service areas, images — lives here.
  *
  * HOW TO EDIT
  * - Find the text you want to change between the quote marks
@@ -19,12 +19,22 @@
  * - After editing, save the file, commit it, and push to
  *   GitHub. Cloudflare Pages will publish the update
  *   automatically within a minute or two.
+ *
+ * ABOUT THE IMAGES BELOW
+ * Every image path currently points straight at the live
+ * midcitiesvending.com site (e.g. "https://www.midcitiesvending.com/...").
+ * That's temporary — it means the images show up correctly
+ * right away with zero setup, but the site is still depending
+ * on the old site staying online.
+ * To make images fully local: download each file from the URL
+ * listed, drop it into the /img folder using the SAME filename,
+ * then change that one path below from the long midcitiesvending.com
+ * URL to "./img/filename.png". See README.md for the full list.
  * ============================================================
  */
 
 window.CONTENT = {
 
-  // Used in the browser tab title and search engine results.
   meta: {
     title: "Cashless Vending Machines in Dallas–Fort Worth | Mid Cities Vending",
     description: "Modern cashless vending machines for DFW offices, warehouses, dealerships, and breakrooms. Tap-to-pay, smart inventory tracking, stocking, service, and maintenance included.",
@@ -39,17 +49,15 @@ window.CONTENT = {
     email: "contact@midcitiesvending.com",
     facebookUrl: "https://www.facebook.com/profile.php?id=61563038035305&mibextid=LQQJ4d",
     googleReviewsUrl: "https://www.google.com/maps/place/Mid+Cities+Vending/data=!4m2!3m1!1s0x0:0xda1756a30ac419a1",
-    // Shown as a small status pill in the header.
     statusLabel: "Available Now",
-    // Logo shown in the header. Relative path into the /img folder.
-    logo: "./img/logo.png",
+    // Circular logo mark shown in the header.
+    logo: "https://www.midcitiesvending.com/White%20Circle.png",
     logoAlt: "Mid Cities Vending logo",
   },
 
-  // Top navigation. "href" can be an in-page link like "#about"
-  // or a full page link.
   nav: [
     { label: "Home", href: "#top" },
+    { label: "About", href: "#about" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Service Areas", href: "#service-areas" },
     { label: "FAQ", href: "#faq" },
@@ -57,45 +65,35 @@ window.CONTENT = {
   ],
 
   hero: {
-    eyebrow: "Dallas–Fort Worth Smart Vending",
+    eyebrow: "Dallas-Fort Worth Smart Vending",
     headline: "Cashless vending, made simple.",
-    body: "Mid Cities Vending places, stocks, and services modern smart vending machines for DFW offices, warehouses, dealerships, gyms, and breakrooms. Customers tap, grab, and go — we handle the rest.",
+    body: "Mid Cities Vending places, stocks, and services modern smart vending machines for DFW offices, warehouses, dealerships, gyms, and breakrooms. Customers swipe or tap, open the door, grab what they want, and close it. We handle the rest.",
     primaryCta: { label: "Request Free Assessment", href: "#get-started" },
-    secondaryCta: { label: "See How It Works", href: "#how-it-works" },
-    // Photo shown in the hero. Relative path into the /img folder.
-    // Swap the file in /img to update it — no need to touch this path
-    // unless you rename the file.
-    image: "./img/image_2026-07-03_211948211.png",
-    imageAlt: "Mid Cities Vending smart vending machine in a breakroom",
+    secondaryCta: { label: "See How It Works", href: "#about" },
+    image: "https://www.midcitiesvending.com/image_2026-07-03_211948211.png",
+    imageAlt: "Modern smart vending machine in a workplace setting",
   },
 
   howItWorks: {
     eyebrow: "How It Works",
-    headline: "Four taps, zero hassle.",
-    body: "Our smart vending machines are cashless, easy to use, and professionally serviced from day one.",
-    steps: [
-      { code: "A1", title: "Tap or swipe", description: "Customers pay with card or Apple/Google Pay right at the reader — no cash, no exact change." },
-      { code: "A2", title: "Door unlocks", description: "The machine confirms payment instantly and the door pops open." },
-      { code: "A3", title: "Grab & go", description: "They take what they want and close the door. Checkout is already handled." },
-      { code: "A4", title: "We restock remotely", description: "Smart inventory tracking tells us what's low before it runs out, so we restock ahead of demand." },
-    ],
+    headline: "How It Works.",
+    body: "Our smart vending machines are cashless, easy to use, and professionally serviced. Customers simply swipe or tap, open the door, take what they want, and close the door. The machine handles checkout automatically.",
+    image: "https://www.midcitiesvending.com/image_2026-07-03_213317998.png",
+    imageAlt: "Customer tapping a card to pay at a smart vending machine",
   },
 
   upgrade: {
     eyebrow: "Smart Vending Machines",
     headline: "Modern machines that actually look like an upgrade.",
-    body: "Give your employees, customers, and guests a cleaner vending experience without adding work for your team. It's a better fit for modern workplaces than outdated snack and soda machines — especially in offices, dealerships, warehouses, gyms, and busy breakrooms where people want fast, grab-and-go options.",
-    // Photo of a machine. Relative path into the /img folder.
-    // Swap the file in /img to update it — no need to touch this path
-    // unless you rename the file.
-    photo: "./img/machine-modern.png",
-    photoAlt: "Mid Cities Vending smart vending machine",
+    body: "Give your employees, customers, and guests a cleaner vending experience without adding work for your team. It is a better fit for modern workplaces than outdated snack and soda machines especially in offices, dealerships, warehouses, gyms, and busy breakrooms where people want fast grab-and-go options.",
+    photo: "https://www.midcitiesvending.com/image_2026-06-27_181015002.png",
+    photoAlt: "Modern smart vending machine",
   },
 
   locations: {
     eyebrow: "Locations We Service",
     headline: "Built for busy DFW workplaces.",
-    body: "Smart vending works best where employees, customers, or guests need quick access to drinks, snacks, and grab-and-go options. We focus on workplaces with steady foot traffic, breakroom needs, and teams that benefit from fast, convenient service.",
+    body: "Smart vending works best in locations where employees, customers, or guests need quick access to drinks, snacks, and grab-and-go options. We focus on workplaces with steady foot traffic, breakroom needs, and teams that benefit from fast, convenient service.",
     types: [
       "Auto Dealerships",
       "Employee Breakrooms",
@@ -108,41 +106,38 @@ window.CONTENT = {
     ],
   },
 
-  // Cities linked from "Service Areas" — matches the original site's
-  // area pages. Point href at the matching page once it exists, or
-  // leave as "#" for now.
   serviceAreas: [
-    { label: "Dallas", href: "./areas/dallas.html" },
-    { label: "Fort Worth", href: "./areas/fort-worth.html" },
-    { label: "Arlington", href: "./areas/arlington.html" },
-    { label: "Mansfield", href: "./areas/mansfield.html" },
-    { label: "Grand Prairie", href: "./areas/grand-prairie.html" },
-    { label: "Irving", href: "./areas/irving.html" },
-    { label: "Hurst-Euless-Bedford", href: "./areas/hurst-euless-bedford.html" },
-    { label: "Midlothian", href: "./areas/midlothian.html" },
-  ],
-
-  features: [
-    { code: "", image: "./img/feature-full-service.png", title: "Full Service Vending", description: "We place and fully manage modern cashless vending machines with zero hassle for businesses all across the DFW metroplex." },
-    { code: "", image: "./img/feature-custom-mix.png", title: "Custom Product Mix", description: "Your people choose what goes in the machine. We tailor the lineup to your preferences, budget, and dietary needs, and we can adjust anytime." },
-    { code: "", image: "./img/feature-support.png", title: "24/7 Support", description: "If something isn't working right, you get quick support. We specialize in servicing busy workplaces and multi-shift locations." },
-    { code: "", image: "./img/feature-restocking.png", title: "Fast Restocking", description: "Expect consistently stocked machines and fresh products. We monitor best-sellers, rotate inventory, and stay ahead of outages." },
-    { code: "", image: "./img/feature-healthy.png", title: "Healthy Options", description: "Want better choices? We can stock protein snacks, low-sugar drinks, energy options, and healthier picks while still keeping the crowd favorites." },
-    { code: "", image: "./img/feature-cashless.png", title: "Cashless Payments", description: "Card and tap-to-pay options like Apple/Google Pay make it easy for customers. Smart readers also help us track inventory and restock faster." },
+    { label: "Dallas", href: "https://www.midcitiesvending.com/areas/dallas-vending-machines" },
+    { label: "Fort Worth", href: "https://www.midcitiesvending.com/areas/fort-worth-vending-machines" },
+    { label: "Arlington", href: "https://www.midcitiesvending.com/areas/arlington-vending-machines" },
+    { label: "Mansfield", href: "https://www.midcitiesvending.com/areas/mansfield-vending-machines" },
+    { label: "Grand Prairie", href: "https://www.midcitiesvending.com/areas/grand-prairie-vending-machines" },
+    { label: "Irving", href: "https://www.midcitiesvending.com/areas/irving-vending-machines" },
+    { label: "Hurst-Euless-Bedford", href: "https://www.midcitiesvending.com/areas/hurst-euless-bedford-vending-machines" },
+    { label: "Midlothian", href: "https://www.midcitiesvending.com/areas/midlothian-vending-machines" },
   ],
 
   testimonials: {
     eyebrow: "Testimonials",
-    headline: "What DFW businesses are saying.",
-    body: "Customer reviews shared on Google.",
-    googleLogo: "./img/google-logo.png",
+    headline: "Google Reviews",
+    body: "Customer reviews shared on Google",
+    googleLogo: "https://www.midcitiesvending.com/google-logo.png",
     reviewUrl: "https://www.google.com/maps/place/Mid+Cities+Vending/data=!4m2!3m1!1s0x0:0xda1756a30ac419a1",
     reviewCtaLabel: "View all reviews on Google →",
   },
 
+  features: [
+    { image: "https://www.midcitiesvending.com/image_2026-06-27_164814711.png", title: "Full Service Vending", description: "We place and fully manage modern cashless vending machines with zero hassle for businesses all across the DFW metroplex." },
+    { image: "https://www.midcitiesvending.com/image_2026-06-27_164603442.png", title: "Custom Product Mix", description: "Your people choose what goes in the machine. We tailor the lineup to your preferences, budget, and dietary needs, and we can adjust anytime." },
+    { image: "https://www.midcitiesvending.com/image_2026-06-27_164622902.png", title: "24/7 Support", description: "If something is not working right you get quick support. We specialize in servicing busy workplaces and multi-shift locations." },
+    { image: "https://www.midcitiesvending.com/image_2026-06-27_164726373.png", title: "Fast Restocking", description: "Expect consistently stocked machines and fresh products. We monitor best-sellers, rotate inventory, and stay ahead of outages." },
+    { image: "https://www.midcitiesvending.com/image_2026-06-27_164742560.png", title: "Healthy Options", description: "Want better choices? We can stock protein snacks, low-sugar drinks, energy options, and healthier picks while still keeping the crowd favorites." },
+    { image: "https://www.midcitiesvending.com/image_2026-06-27_164530142.png", title: "Cashless Payments", description: "Card and tap-to-pay options like Apple/Google Pay make it easy for customers. Smart readers also help us track inventory and restock faster." },
+  ],
+
   faq: {
     eyebrow: "Frequently Asked Questions",
-    headline: "Good to know.",
+    headline: "",
     items: [
       { q: "How much does vending service cost?", a: "Absolutely no cost to you! We provide the machine, delivery, setup, stocking, and service." },
       { q: "How often do you restock?", a: "We monitor inventory remotely and restock before the machine even starts looking empty." },
@@ -155,15 +150,15 @@ window.CONTENT = {
 
   ctaBand: {
     id: "get-started",
-    eyebrow: "Ready for an Upgrade?",
-    headline: "Let's get your location set up.",
+    eyebrow: "",
+    headline: "Ready for an upgrade?",
     body: "Old machines, empty rows, cash-only payments, and slow service make vending frustrating for employees and customers. Mid Cities Vending makes it simple to bring in a cleaner, modern cashless machine with local service and no day-to-day work for your team. Request a free smart vending assessment and we'll review your location, traffic, breakroom setup, and product needs to see if your facility is a good fit.",
     cta: { label: "Get Started", href: "https://forms.midcitiesvending.com/midcitiesvending/form/GetStarted/formperma/Nlca7JWxF0-Y-1DkDoS-LKJHZLBtWwolQPmQywHj37w" },
   },
 
   contact: {
     eyebrow: "Contact Us",
-    headline: "Let's talk about your location.",
+    headline: "",
     callTitle: "Call or Text",
     callBody: "Got questions? Call our vending team anytime for 24/7 assistance.",
     emailTitle: "Email Us",

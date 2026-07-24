@@ -8,10 +8,10 @@
 <meta property="og:title" content="Cashless Vending Machines in Dallas–Fort Worth | Mid Cities Vending">
 <meta property="og:description" content="Modern cashless vending machines for DFW offices, warehouses, dealerships, and breakrooms.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#12181C">
+<meta name="theme-color" content="#EA7704">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
@@ -22,21 +22,21 @@
 <header class="site-header" id="site-header">
   <div class="topbar">
     <div class="wrap topbar-inner">
-      <span class="status-pill"><span class="status-dot"></span><span data-key="business.statusLabel"></span></span>
       <div class="topbar-contact">
-        <a data-key="business.phoneDisplay" data-attr-href="business.phoneHref"></a>
         <a data-key="business.email" data-attr-href="business.emailHref"></a>
+        <a data-key="business.phoneDisplay" data-attr-href="business.phoneHref"></a>
       </div>
     </div>
   </div>
 
   <div class="wrap nav-inner">
     <a href="#top" class="brand">
-      <span class="brand-mark" aria-hidden="true">
-        <img id="brand-logo" src="" alt="" width="30" height="30">
+      <span class="brand-mark">
+        <img id="brand-logo" src="" alt="" width="44" height="44">
       </span>
       <span class="brand-text">
         <span class="brand-name" data-key="business.shortName"></span>
+        <span class="brand-tagline" data-key="business.tagline"></span>
       </span>
     </a>
 
@@ -62,33 +62,40 @@
         <p class="hero-body" data-key="hero.body"></p>
         <div class="hero-ctas">
           <a class="btn btn-vend" data-key="hero.primaryCta.label" data-attr-href="hero.primaryCta.href"></a>
-          <a class="btn btn-ghost" data-key="hero.secondaryCta.label" data-attr-href="hero.secondaryCta.href"></a>
+          <a class="btn btn-outline" data-key="hero.secondaryCta.label" data-attr-href="hero.secondaryCta.href"></a>
         </div>
       </div>
-
-      <div class="hero-visual" id="hero-visual" aria-hidden="true"></div>
+      <div class="hero-media">
+        <img id="hero-image" src="" alt="" width="800" height="450" loading="eager">
+      </div>
     </div>
   </section>
 
   <!-- ============ HOW IT WORKS ============ -->
   <section class="section" id="how-it-works">
-    <div class="wrap">
-      <p class="eyebrow" data-key="howItWorks.eyebrow"></p>
-      <h2 class="section-headline" data-key="howItWorks.headline"></h2>
-      <p class="section-body" data-key="howItWorks.body"></p>
-      <ol class="steps" id="steps-list"></ol>
+    <div class="wrap split-grid split-grid-reverse">
+      <div class="split-copy">
+        <p class="eyebrow" data-key="howItWorks.eyebrow"></p>
+        <h2 class="section-headline" data-key="howItWorks.headline"></h2>
+        <p class="section-body" data-key="howItWorks.body"></p>
+      </div>
+      <div class="split-media">
+        <img id="how-it-works-image" src="" alt="" width="700" height="525" loading="lazy">
+      </div>
     </div>
   </section>
 
   <!-- ============ UPGRADE / MODERN MACHINES ============ -->
   <section class="section section-alt" id="about">
-    <div class="wrap upgrade-grid">
-      <div class="upgrade-copy">
+    <div class="wrap split-grid">
+      <div class="split-copy">
         <p class="eyebrow" data-key="upgrade.eyebrow"></p>
         <h2 class="section-headline" data-key="upgrade.headline"></h2>
         <p class="section-body" data-key="upgrade.body"></p>
       </div>
-      <div class="upgrade-visual" id="upgrade-visual" aria-hidden="true"></div>
+      <div class="split-media split-media-tall">
+        <img id="upgrade-image" src="" alt="" width="560" height="700" loading="lazy">
+      </div>
     </div>
   </section>
 
@@ -107,32 +114,32 @@
     </div>
   </section>
 
-  <!-- ============ FEATURES ============ -->
-  <section class="section section-alt" id="features">
-    <div class="wrap">
-      <h2 class="section-headline">Everything's handled.</h2>
-      <div class="feature-grid" id="feature-grid"></div>
-    </div>
-  </section>
-
   <!-- ============ TESTIMONIALS ============ -->
-  <section class="section testimonials">
+  <section class="section section-alt testimonials">
     <div class="wrap testimonials-inner">
-      <p class="eyebrow" data-key="testimonials.eyebrow"></p>
-      <h2 class="section-headline" data-key="testimonials.headline"></h2>
       <div class="google-row">
-        <img id="google-logo" src="" alt="" width="28" height="28">
-        <p class="section-body on-dark" data-key="testimonials.body"></p>
+        <img id="google-logo" src="" alt="Google" width="40" height="40">
+        <div>
+          <p class="eyebrow" data-key="testimonials.headline"></p>
+          <p class="section-body" data-key="testimonials.body"></p>
+        </div>
       </div>
       <a class="btn btn-outline" id="review-link" data-key="testimonials.reviewCtaLabel" data-attr-href="testimonials.reviewUrl"></a>
     </div>
   </section>
 
+  <!-- ============ FEATURES ============ -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="feature-grid" id="feature-grid"></div>
+    </div>
+  </section>
+
   <!-- ============ FAQ ============ -->
-  <section class="section" id="faq">
+  <section class="section section-alt" id="faq">
     <div class="wrap">
       <p class="eyebrow" data-key="faq.eyebrow"></p>
-      <h2 class="section-headline" data-key="faq.headline"></h2>
+      <h2 class="section-headline">Frequently Asked Questions</h2>
       <div class="faq-list" id="faq-list"></div>
     </div>
   </section>
@@ -140,9 +147,8 @@
   <!-- ============ CTA BAND ============ -->
   <section class="cta-band" id="get-started">
     <div class="wrap cta-band-inner">
-      <p class="eyebrow eyebrow-on-dark" data-key="ctaBand.eyebrow"></p>
-      <h2 class="section-headline on-dark" data-key="ctaBand.headline"></h2>
-      <p class="section-body on-dark" data-key="ctaBand.body"></p>
+      <h2 class="section-headline" data-key="ctaBand.headline"></h2>
+      <p class="section-body" data-key="ctaBand.body"></p>
       <a class="btn btn-vend" data-key="ctaBand.cta.label" data-attr-href="ctaBand.cta.href"></a>
     </div>
   </section>
@@ -151,23 +157,21 @@
   <section class="section" id="contact">
     <div class="wrap">
       <p class="eyebrow" data-key="contact.eyebrow"></p>
-      <h2 class="section-headline" data-key="contact.headline"></h2>
 
       <div class="contact-grid">
         <div class="contact-card">
-          <span class="contact-code"><img src="./img/phone.png" width="30px" height="auto"></span>
           <h3 data-key="contact.callTitle"></h3>
           <p data-key="contact.callBody"></p>
           <a class="contact-link" data-key="business.phoneDisplay" data-attr-href="business.phoneHref"></a>
         </div>
         <div class="contact-card">
-          <span class="contact-code"><img src="./img/email.png" width="30px" height="auto"></span>
           <h3 data-key="contact.emailTitle"></h3>
           <p data-key="contact.emailBody"></p>
           <a class="contact-link" data-key="business.email" data-attr-href="business.emailHref"></a>
         </div>
       </div>
 
+      <p class="connect-label">Connect With Us</p>
       <div class="social-row" id="social-row"></div>
     </div>
   </section>
