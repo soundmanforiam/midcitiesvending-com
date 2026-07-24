@@ -21,15 +21,11 @@
  *   automatically within a minute or two.
  *
  * ABOUT THE IMAGES BELOW
- * Every image path currently points straight at the live
- * midcitiesvending.com site (e.g. "https://www.midcitiesvending.com/...").
- * That's temporary — it means the images show up correctly
- * right away with zero setup, but the site is still depending
- * on the old site staying online.
- * To make images fully local: download each file from the URL
- * listed, drop it into the /img folder using the SAME filename,
- * then change that one path below from the long midcitiesvending.com
- * URL to "./img/filename.png". See README.md for the full list.
+ * All image paths point at local files in the /img folder
+ * (e.g. "./img/logo.png"), so the site has zero dependency on
+ * the original midcitiesvending.com site staying online. If you
+ * ever need to swap a photo, just replace the file in /img with
+ * a new one using the same filename — no code changes needed.
  * ============================================================
  */
 
@@ -51,7 +47,7 @@ window.CONTENT = {
     googleReviewsUrl: "https://www.google.com/maps/place/Mid+Cities+Vending/data=!4m2!3m1!1s0x0:0xda1756a30ac419a1",
     statusLabel: "Available Now",
     // Circular logo mark shown in the header.
-    logo: "https://www.midcitiesvending.com/White%20Circle.png",
+    logo: "./img/logo.png",
     logoAlt: "Mid Cities Vending logo",
   },
 
@@ -70,7 +66,7 @@ window.CONTENT = {
     body: "Mid Cities Vending places, stocks, and services modern smart vending machines for DFW offices, warehouses, dealerships, gyms, and breakrooms. Customers swipe or tap, open the door, grab what they want, and close it. We handle the rest.",
     primaryCta: { label: "Request Free Assessment", href: "#get-started" },
     secondaryCta: { label: "See How It Works", href: "#about" },
-    image: "https://www.midcitiesvending.com/image_2026-07-03_211948211.png",
+    image: "./img/hero.png",
     imageAlt: "Modern smart vending machine in a workplace setting",
   },
 
@@ -78,7 +74,7 @@ window.CONTENT = {
     eyebrow: "How It Works",
     headline: "How It Works.",
     body: "Our smart vending machines are cashless, easy to use, and professionally serviced. Customers simply swipe or tap, open the door, take what they want, and close the door. The machine handles checkout automatically.",
-    image: "https://www.midcitiesvending.com/image_2026-07-03_213317998.png",
+    image: "./img/how-it-works.png",
     imageAlt: "Customer tapping a card to pay at a smart vending machine",
   },
 
@@ -86,7 +82,7 @@ window.CONTENT = {
     eyebrow: "Smart Vending Machines",
     headline: "Modern machines that actually look like an upgrade.",
     body: "Give your employees, customers, and guests a cleaner vending experience without adding work for your team. It is a better fit for modern workplaces than outdated snack and soda machines especially in offices, dealerships, warehouses, gyms, and busy breakrooms where people want fast grab-and-go options.",
-    photo: "https://www.midcitiesvending.com/image_2026-06-27_181015002.png",
+    photo: "./img/machine-tall.png",
     photoAlt: "Modern smart vending machine",
   },
 
@@ -121,18 +117,18 @@ window.CONTENT = {
     eyebrow: "Testimonials",
     headline: "Google Reviews",
     body: "Customer reviews shared on Google",
-    googleLogo: "https://www.midcitiesvending.com/google-logo.png",
+    googleLogo: "./img/google-logo.png",
     reviewUrl: "https://www.google.com/maps/place/Mid+Cities+Vending/data=!4m2!3m1!1s0x0:0xda1756a30ac419a1",
     reviewCtaLabel: "View all reviews on Google →",
   },
 
   features: [
-    { image: "https://www.midcitiesvending.com/image_2026-06-27_164814711.png", title: "Full Service Vending", description: "We place and fully manage modern cashless vending machines with zero hassle for businesses all across the DFW metroplex." },
-    { image: "https://www.midcitiesvending.com/image_2026-06-27_164603442.png", title: "Custom Product Mix", description: "Your people choose what goes in the machine. We tailor the lineup to your preferences, budget, and dietary needs, and we can adjust anytime." },
-    { image: "https://www.midcitiesvending.com/image_2026-06-27_164622902.png", title: "24/7 Support", description: "If something is not working right you get quick support. We specialize in servicing busy workplaces and multi-shift locations." },
-    { image: "https://www.midcitiesvending.com/image_2026-06-27_164726373.png", title: "Fast Restocking", description: "Expect consistently stocked machines and fresh products. We monitor best-sellers, rotate inventory, and stay ahead of outages." },
-    { image: "https://www.midcitiesvending.com/image_2026-06-27_164742560.png", title: "Healthy Options", description: "Want better choices? We can stock protein snacks, low-sugar drinks, energy options, and healthier picks while still keeping the crowd favorites." },
-    { image: "https://www.midcitiesvending.com/image_2026-06-27_164530142.png", title: "Cashless Payments", description: "Card and tap-to-pay options like Apple/Google Pay make it easy for customers. Smart readers also help us track inventory and restock faster." },
+    { image: "./img/feature-full-service.png", title: "Full Service Vending", description: "We place and fully manage modern cashless vending machines with zero hassle for businesses all across the DFW metroplex." },
+    { image: "./img/feature-custom-mix.png", title: "Custom Product Mix", description: "Your people choose what goes in the machine. We tailor the lineup to your preferences, budget, and dietary needs, and we can adjust anytime." },
+    { image: "./img/feature-support.png", title: "24/7 Support", description: "If something is not working right you get quick support. We specialize in servicing busy workplaces and multi-shift locations." },
+    { image: "./img/feature-restocking.png", title: "Fast Restocking", description: "Expect consistently stocked machines and fresh products. We monitor best-sellers, rotate inventory, and stay ahead of outages." },
+    { image: "./img/feature-healthy.png", title: "Healthy Options", description: "Want better choices? We can stock protein snacks, low-sugar drinks, energy options, and healthier picks while still keeping the crowd favorites." },
+    { image: "./img/feature-cashless.png", title: "Cashless Payments", description: "Card and tap-to-pay options like Apple/Google Pay make it easy for customers. Smart readers also help us track inventory and restock faster." },
   ],
 
   faq: {

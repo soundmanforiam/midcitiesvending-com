@@ -49,20 +49,15 @@ Save the file, commit, push — that's it. No rebuild step required.
 Font: **Poppins** (400 body / 500 headings), loaded from Google Fonts —
 same as the live site.
 
-## Images — important, read this
+## Images
 
-Every image on the site currently loads directly from the **live
-midcitiesvending.com site** (e.g. `https://www.midcitiesvending.com/White%20Circle.png`).
-That was a deliberate short-term choice: it means the site displays
-correctly right now with zero extra work, but it also means the site
-depends on the old site staying online and unchanged.
+All 17 images are stored locally in the `img/` folder and referenced with
+relative paths (`./img/filename.png`) — the site has no dependency on
+midcitiesvending.com staying online. The table below is kept for reference,
+in case you ever need to re-download the original source file for one of
+them (e.g. the client sends a replacement photo and you want to compare).
 
-To make the site fully self-hosted, download each file below and save it
-into the `img/` folder using the exact filename shown, then update the
-matching line in `content.js` (search for the URL) to `./img/filename.png`
-instead of the long midcitiesvending.com URL.
-
-| Save as (in `img/`) | Download from | Used for |
+| File (in `img/`) | Original source | Used for |
 |---|---|---|
 | `logo.png` | https://www.midcitiesvending.com/White%20Circle.png | Header logo |
 | `hero.png` | https://www.midcitiesvending.com/image_2026-07-03_211948211.png | Hero photo |
@@ -75,6 +70,27 @@ instead of the long midcitiesvending.com URL.
 | `feature-restocking.png` | https://www.midcitiesvending.com/image_2026-06-27_164726373.png | Fast Restocking icon |
 | `feature-healthy.png` | https://www.midcitiesvending.com/image_2026-06-27_164742560.png | Healthy Options icon |
 | `feature-cashless.png` | https://www.midcitiesvending.com/image_2026-06-27_164530142.png | Cashless Payments icon |
+| `bg-texture.png` | https://www.midcitiesvending.com/image_2026-07-01_220743701.png | Background texture — used behind "How It Works", "Service Areas", and "FAQ" |
+| `bg-machines-dark.png` | https://www.midcitiesvending.com/image_2026-06-27_161754398.png | Background photo behind "Modern machines" section (dark tint + white text) |
+| `bg-testimonials.png` | https://www.midcitiesvending.com/image_2026-07-01_222436702.png | Background photo behind the testimonials section |
+| `bg-features.png` | https://www.midcitiesvending.com/image_2026-06-27_165314358.png | Background texture behind the feature cards (white tint) |
+| `bg-cta.png` | https://www.midcitiesvending.com/image_2026-04-05_004045982.png | Background photo behind the "Ready for an upgrade?" band (orange tint) |
+
+To replace any image (e.g. a client sends an updated photo), just overwrite
+the matching file in `img/` with the same filename — no code changes needed.
+If you rename a file instead, update its one matching path in `content.js`
+(for the 12 content images) or `styles.css` (for the 5 background images,
+search for `background-image`).
+
+### About the section backgrounds
+
+Six sections use a background image with a semi-transparent color layered
+on top (a common Zoho Sites pattern) instead of a flat color. These are set
+directly in `styles.css` (search for `background-image`) rather than in
+`content.js`, since they're decorative rather than content a client would
+typically swap. Two of those sections — "Modern machines" and the CTA band —
+sit on a darker tint, so their heading/body text is white instead of the
+usual navy-gray; that's intentional and matches the live site.
 
 Easiest way to grab them: open each URL in your browser and use
 "Save Image As...", or right-click each image on the live site itself.

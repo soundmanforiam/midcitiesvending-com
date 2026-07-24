@@ -91,6 +91,56 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 .section { padding: 3rem 0; }
 .section-alt { background: var(--bg-alt); }
 
+/* ---------- Section background images (matches live site) ----------
+   Each of these sections on midcitiesvending.com uses a background
+   photo/texture with a semi-transparent color layered over it, and
+   background-attachment: fixed for a "sticky" parallax feel. */
+#how-it-works {
+  background-image: url("./img/bg-texture.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#about {
+  background-image: linear-gradient(rgba(31, 31, 31, 0.25), rgba(31, 31, 31, 0.25)), url("./img/bg-machines-dark.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+#about .eyebrow,
+#about .section-headline,
+#about .section-body { color: var(--white); }
+#service-areas {
+  background-image: linear-gradient(rgba(30, 34, 45, 0.05), rgba(30, 34, 45, 0.05)), url("./img/bg-texture.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.testimonials {
+  background-image: url("./img/bg-testimonials.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#features {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("./img/bg-features.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+#faq {
+  background-image: url("./img/bg-texture.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
@@ -312,10 +362,19 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 }
 
 /* ---------- CTA band ---------- */
-.cta-band { background: var(--navy); padding: 3.25rem 0; }
+.cta-band {
+  padding: 3.25rem 0;
+  background-image: linear-gradient(rgba(250, 116, 27, 0.8), rgba(250, 116, 27, 0.8)), url("./img/bg-cta.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .cta-band .section-headline { color: var(--white); }
-.cta-band .section-body { color: #C7D6DD; margin-bottom: 1.5rem; }
+.cta-band .section-body { color: #FFE8D6; margin-bottom: 1.5rem; }
 .cta-band-inner .btn { margin-top: 0.25rem; }
+.cta-band .btn-vend { background: var(--white); color: var(--orange); box-shadow: none; }
+.cta-band .btn-vend:hover { background: #FFF3E9; }
 
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; gap: 1rem; margin-top: 1rem; }
@@ -349,7 +408,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 .social-row a:hover { border-color: var(--orange); color: var(--orange); }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--navy); color: #B7C7CF; padding: 1.75rem 0; }
+.site-footer { background: #000; color: #B7C7CF; padding: 1.75rem 0; }
 .footer-inner {
   display: flex; flex-direction: column; gap: 0.75rem;
   font-size: 0.85rem;
